@@ -10,12 +10,16 @@ import UIKit
 
 class StatesListViewController: UIViewController {
     // MARK: - Properties
+    private enum Section{
+        case main
+    }
     var country: String?
     var states: [String] = [] {
         didSet {
-            updateTableView()
+            updateDataSource(with: self.states, animated: false)
         }
     }
+    private var dataSource: UITableViewDiffableDataSource<Section, String>?
     let searchController = UISearchController()
     var filteredData: [String] = []
 
@@ -25,8 +29,7 @@ class StatesListViewController: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.dataSource = self
-        tableView.delegate = self
+        setupDataSource()
         searchController.setupSearchControllerWith(self)
         navigationItem.searchController = searchController
         guard let country = country else { return }
@@ -51,31 +54,32 @@ class StatesListViewController: UIViewController {
     }
     
     // MARK: - Class Methods
-    func updateTableView() {
-        DispatchQueue.main.async {
-            self.tableView.reloadData()
-        }
-    }
-}
-
-extension StatesListViewController: UITableViewDataSource, UITableViewDelegate {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return searchController.searchIsActive ? filteredData.count : states.count
+    func setupDataSource() {
+        dataSource = UITableViewDiffableDataSource(tableView: tableView, cellProvider: { (tableView, indexPath, state) -> UITableViewCell? in
+            let cell = tableView.dequeueReusableCell(withIdentifier: "stateCell", for: indexPath)
+            cell.textLabel?.text = state
+            return cell
+        })
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "stateCell", for: indexPath)
-        let state = searchController.searchIsActive ? filteredData[indexPath.row] : states[indexPath.row]
-        cell.textLabel?.text = state
-        return cell
+    func updateDataSource(with items: [String], animated: Bool) {
+        DispatchQueue.main.async {
+            var snapshot = NSDiffableDataSourceSnapshot<Section, String>()
+            snapshot.appendSections([.main])
+            snapshot.appendItems(items, toSection: .main)
+            self.dataSource?.apply(snapshot)
+        }
     }
 }
 
 extension StatesListViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         let searchBar = searchController.searchBar
-        guard let searchBarText = searchBar.text else { return }
+        guard let searchBarText = searchBar.text, !searchBarText.isEmpty else {
+            updateDataSource(with: states, animated: true)
+            return
+        }
         filteredData = searchController.filer(states, by: searchBarText)
-        updateTableView()
+        updateDataSource(with: filteredData, animated: true)
     }
 }
