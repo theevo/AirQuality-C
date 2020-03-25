@@ -12,6 +12,9 @@
 		620C4FCB2385DBF9001500FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 620C4FCA2385DBF9001500FE /* Assets.xcassets */; };
 		620C4FCE2385DBF9001500FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 620C4FCC2385DBF9001500FE /* LaunchScreen.storyboard */; };
 		620C4FD12385DBF9001500FE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 620C4FD02385DBF9001500FE /* main.m */; };
+		AC6DC3AF242BF13900CB10B9 /* TTVCityAirQuality.m in Sources */ = {isa = PBXBuildFile; fileRef = AC6DC3AE242BF13900CB10B9 /* TTVCityAirQuality.m */; };
+		AC6DC3B2242BF46100CB10B9 /* TTVWeather.m in Sources */ = {isa = PBXBuildFile; fileRef = AC6DC3B1242BF46100CB10B9 /* TTVWeather.m */; };
+		AC6DC3B5242BF46E00CB10B9 /* TTVPollution.m in Sources */ = {isa = PBXBuildFile; fileRef = AC6DC3B4242BF46E00CB10B9 /* TTVPollution.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,12 @@
 		620C4FCD2385DBF9001500FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		620C4FCF2385DBF9001500FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		620C4FD02385DBF9001500FE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AC6DC3AD242BF13900CB10B9 /* TTVCityAirQuality.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTVCityAirQuality.h; sourceTree = "<group>"; };
+		AC6DC3AE242BF13900CB10B9 /* TTVCityAirQuality.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTVCityAirQuality.m; sourceTree = "<group>"; };
+		AC6DC3B0242BF46100CB10B9 /* TTVWeather.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTVWeather.h; sourceTree = "<group>"; };
+		AC6DC3B1242BF46100CB10B9 /* TTVWeather.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTVWeather.m; sourceTree = "<group>"; };
+		AC6DC3B3242BF46E00CB10B9 /* TTVPollution.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTVPollution.h; sourceTree = "<group>"; };
+		AC6DC3B4242BF46E00CB10B9 /* TTVPollution.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTVPollution.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +65,7 @@
 		620C4FBD2385DBF6001500FE /* AirQuality ObjC */ = {
 			isa = PBXGroup;
 			children = (
+				AC6DC3AC242BEB9000CB10B9 /* Models */,
 				620C4FD72385DDA8001500FE /* Resources */,
 			);
 			path = "AirQuality ObjC";
@@ -74,6 +84,19 @@
 				620C4FD02385DBF9001500FE /* main.m */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		AC6DC3AC242BEB9000CB10B9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AC6DC3AD242BF13900CB10B9 /* TTVCityAirQuality.h */,
+				AC6DC3AE242BF13900CB10B9 /* TTVCityAirQuality.m */,
+				AC6DC3B0242BF46100CB10B9 /* TTVWeather.h */,
+				AC6DC3B1242BF46100CB10B9 /* TTVWeather.m */,
+				AC6DC3B3242BF46E00CB10B9 /* TTVPollution.h */,
+				AC6DC3B4242BF46E00CB10B9 /* TTVPollution.m */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,9 +125,9 @@
 		620C4FB32385DBF6001500FE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = DVM;
+				CLASSPREFIX = TTV;
 				LastUpgradeCheck = 1120;
-				ORGANIZATIONNAME = "RYAN GREENBURG";
+				ORGANIZATIONNAME = "Theo Vora";
 				TargetAttributes = {
 					620C4FBA2385DBF6001500FE = {
 						CreatedOnToolsVersion = 11.2.1;
@@ -148,7 +171,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				620C4FC02385DBF6001500FE /* AppDelegate.m in Sources */,
+				AC6DC3B2242BF46100CB10B9 /* TTVWeather.m in Sources */,
 				620C4FD12385DBF9001500FE /* main.m in Sources */,
+				AC6DC3B5242BF46E00CB10B9 /* TTVPollution.m in Sources */,
+				AC6DC3AF242BF13900CB10B9 /* TTVCityAirQuality.m in Sources */,
 				620C4FC32385DBF6001500FE /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
