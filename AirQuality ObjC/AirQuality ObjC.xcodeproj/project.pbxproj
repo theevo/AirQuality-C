@@ -16,6 +16,8 @@
 		AC6DC3B2242BF46100CB10B9 /* TTVWeather.m in Sources */ = {isa = PBXBuildFile; fileRef = AC6DC3B1242BF46100CB10B9 /* TTVWeather.m */; };
 		AC6DC3B5242BF46E00CB10B9 /* TTVPollution.m in Sources */ = {isa = PBXBuildFile; fileRef = AC6DC3B4242BF46E00CB10B9 /* TTVPollution.m */; };
 		AC6DC3BA242C00C300CB10B9 /* TTVCityAirQualityController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC6DC3B9242C00C300CB10B9 /* TTVCityAirQualityController.m */; };
+		ACF0F869242C182F006A5A12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACF0F868242C182F006A5A12 /* Main.storyboard */; };
+		ACF0F86C242C18BF006A5A12 /* CountriesListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF0F86B242C18BF006A5A12 /* CountriesListTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,9 @@
 		AC6DC3B4242BF46E00CB10B9 /* TTVPollution.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTVPollution.m; sourceTree = "<group>"; };
 		AC6DC3B8242C00C300CB10B9 /* TTVCityAirQualityController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTVCityAirQualityController.h; sourceTree = "<group>"; };
 		AC6DC3B9242C00C300CB10B9 /* TTVCityAirQualityController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTVCityAirQualityController.m; sourceTree = "<group>"; };
+		ACF0F868242C182F006A5A12 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		ACF0F86B242C18BF006A5A12 /* CountriesListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesListTableViewController.swift; sourceTree = "<group>"; };
+		ACF0F86F242C1A06006A5A12 /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +75,7 @@
 			children = (
 				AC6DC3B6242C001100CB10B9 /* Controllers */,
 				AC6DC3AC242BEB9000CB10B9 /* Models */,
+				ACF0F867242C181D006A5A12 /* Storyboard */,
 				620C4FD72385DDA8001500FE /* Resources */,
 			);
 			path = "AirQuality ObjC";
@@ -78,6 +84,7 @@
 		620C4FD72385DDA8001500FE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				ACF0F86F242C1A06006A5A12 /* BridgingHeader.h */,
 				620C4FBE2385DBF6001500FE /* AppDelegate.h */,
 				620C4FBF2385DBF6001500FE /* AppDelegate.m */,
 				620C4FC12385DBF6001500FE /* SceneDelegate.h */,
@@ -106,6 +113,7 @@
 		AC6DC3B6242C001100CB10B9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				ACF0F86A242C1885006A5A12 /* View Controllers */,
 				AC6DC3B7242C001E00CB10B9 /* Model Controllers */,
 			);
 			path = Controllers;
@@ -118,6 +126,22 @@
 				AC6DC3B9242C00C300CB10B9 /* TTVCityAirQualityController.m */,
 			);
 			path = "Model Controllers";
+			sourceTree = "<group>";
+		};
+		ACF0F867242C181D006A5A12 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				ACF0F868242C182F006A5A12 /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		ACF0F86A242C1885006A5A12 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				ACF0F86B242C18BF006A5A12 /* CountriesListTableViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,6 +203,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACF0F869242C182F006A5A12 /* Main.storyboard in Resources */,
 				620C4FCE2385DBF9001500FE /* LaunchScreen.storyboard in Resources */,
 				620C4FCB2385DBF9001500FE /* Assets.xcassets in Resources */,
 			);
@@ -191,6 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACF0F86C242C18BF006A5A12 /* CountriesListTableViewController.swift in Sources */,
 				620C4FC02385DBF6001500FE /* AppDelegate.m in Sources */,
 				AC6DC3B2242BF46100CB10B9 /* TTVWeather.m in Sources */,
 				620C4FD12385DBF9001500FE /* main.m in Sources */,
@@ -339,7 +365,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "RG.AirQuality-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "AirQuality ObjC/AirQuality ObjC-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "AirQuality ObjC/Resources/BridgingHeader.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -360,7 +386,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "RG.AirQuality-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "AirQuality ObjC/AirQuality ObjC-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "AirQuality ObjC/Resources/BridgingHeader.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
