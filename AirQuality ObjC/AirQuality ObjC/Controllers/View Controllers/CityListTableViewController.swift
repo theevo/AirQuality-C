@@ -51,15 +51,23 @@ class CityListTableViewController: UITableViewController {
     
     
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    // MARK: - Navigation
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toCityDetailVC" {
+            guard let indexPath = tableView.indexPathForSelectedRow,
+                let destinationVC = segue.destination as? CityDetailViewController
+                else { return }
+            
+            let selectedCity = cities[indexPath.row]
+            let state = countryStateDictionary["state"]
+            let country = countryStateDictionary["country"]
+            
+            destinationVC.cityStateCountryDictionary["city"] = selectedCity
+            destinationVC.cityStateCountryDictionary["state"] = state
+            destinationVC.cityStateCountryDictionary["country"] = country
+        }
+    }
     
     
     // MARK: - Helper Functions

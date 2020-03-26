@@ -224,7 +224,7 @@ static NSString * const apiKeyValueAirvisual = @"c624f1f8-8282-4868-9b56-01bb71a
         NSDictionary *secondLevelJSON = topLevelJSON[@"data"];
         
         TTVCityAirQuality *cityObject = [[TTVCityAirQuality alloc] initWithDictionary:secondLevelJSON];
-        
+                
         completion(cityObject);
         
     }] resume];

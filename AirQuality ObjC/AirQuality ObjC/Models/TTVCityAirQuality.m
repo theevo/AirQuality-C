@@ -37,9 +37,9 @@
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary
 {
-    NSString *city = [dictionary[@"city"] stringValue];
-    NSString *state = [dictionary[@"state"] stringValue];
-    NSString *country = [dictionary[@"country"] stringValue];
+    NSString *city = dictionary[@"city"];
+    NSString *state = dictionary[@"state"];
+    NSString *country = dictionary[@"country"];
     
     NSDictionary *currentDictionary = dictionary[@"current"];
     

@@ -14,6 +14,7 @@
 		620C4FD12385DBF9001500FE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 620C4FD02385DBF9001500FE /* main.m */; };
 		AC4CC5FB242CB69E00AAF0E1 /* StatesListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4CC5FA242CB69E00AAF0E1 /* StatesListTableViewController.swift */; };
 		AC4CC5FD242CBC4400AAF0E1 /* CityListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4CC5FC242CBC4400AAF0E1 /* CityListTableViewController.swift */; };
+		AC4CC5FF242CCC3800AAF0E1 /* CityDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4CC5FE242CCC3800AAF0E1 /* CityDetailViewController.swift */; };
 		AC6DC3AF242BF13900CB10B9 /* TTVCityAirQuality.m in Sources */ = {isa = PBXBuildFile; fileRef = AC6DC3AE242BF13900CB10B9 /* TTVCityAirQuality.m */; };
 		AC6DC3B2242BF46100CB10B9 /* TTVWeather.m in Sources */ = {isa = PBXBuildFile; fileRef = AC6DC3B1242BF46100CB10B9 /* TTVWeather.m */; };
 		AC6DC3B5242BF46E00CB10B9 /* TTVPollution.m in Sources */ = {isa = PBXBuildFile; fileRef = AC6DC3B4242BF46E00CB10B9 /* TTVPollution.m */; };
@@ -34,6 +35,7 @@
 		620C4FD02385DBF9001500FE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AC4CC5FA242CB69E00AAF0E1 /* StatesListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatesListTableViewController.swift; sourceTree = "<group>"; };
 		AC4CC5FC242CBC4400AAF0E1 /* CityListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityListTableViewController.swift; sourceTree = "<group>"; };
+		AC4CC5FE242CCC3800AAF0E1 /* CityDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDetailViewController.swift; sourceTree = "<group>"; };
 		AC6DC3AD242BF13900CB10B9 /* TTVCityAirQuality.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTVCityAirQuality.h; sourceTree = "<group>"; };
 		AC6DC3AE242BF13900CB10B9 /* TTVCityAirQuality.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTVCityAirQuality.m; sourceTree = "<group>"; };
 		AC6DC3B0242BF46100CB10B9 /* TTVWeather.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTVWeather.h; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 				ACF0F86B242C18BF006A5A12 /* CountriesListTableViewController.swift */,
 				AC4CC5FA242CB69E00AAF0E1 /* StatesListTableViewController.swift */,
 				AC4CC5FC242CBC4400AAF0E1 /* CityListTableViewController.swift */,
+				AC4CC5FE242CCC3800AAF0E1 /* CityDetailViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 				ACF0F86C242C18BF006A5A12 /* CountriesListTableViewController.swift in Sources */,
 				620C4FC02385DBF6001500FE /* AppDelegate.m in Sources */,
 				AC6DC3B2242BF46100CB10B9 /* TTVWeather.m in Sources */,
+				AC4CC5FF242CCC3800AAF0E1 /* CityDetailViewController.swift in Sources */,
 				620C4FD12385DBF9001500FE /* main.m in Sources */,
 				AC4CC5FD242CBC4400AAF0E1 /* CityListTableViewController.swift in Sources */,
 				AC6DC3B5242BF46E00CB10B9 /* TTVPollution.m in Sources */,
