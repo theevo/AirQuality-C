@@ -14,19 +14,19 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TTVCityAirQualityController : NSObject
 
-+(void) fetchSupportedCountries:(void(^)(NSArray<NSString *> *))completion;
++(void) fetchSupportedCountries:(void(^)(NSArray<NSString *> *_Nullable))completion;
 
 +(void) fetchSupportedStatesInCountry:(NSString *)country
-                           completion:(void(^)(NSArray<NSString *> *))completion;
+                           completion:(void(^)(NSArray<NSString *> *_Nullable))completion;
 
 +(void) fetchSupportedCitiesInState:(NSString *)state
                             country:(NSString *)country
-                         completion:(void(^)(NSArray<NSString *> *))completion;
+                         completion:(void(^)(NSArray<NSString *> *_Nullable))completion;
 
 +(void) fetchDataForCity:(NSString *)city
                    state:(NSString *)state
                  country:(NSString *)country
-              completion:(void(^)(TTVCityAirQuality *))completion;
+              completion:(void(^)(TTVCityAirQuality *_Nullable))completion;
 
 @end
 

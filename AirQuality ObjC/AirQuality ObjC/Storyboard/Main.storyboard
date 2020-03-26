@@ -9,7 +9,7 @@
         <!--Countries-->
         <scene sceneID="Mlv-CB-o7C">
             <objects>
-                <tableViewController id="prd-o1-AQv" sceneMemberID="viewController">
+                <tableViewController id="prd-o1-AQv" customClass="CountriesListTableViewController" customModule="AirQuality_ObjC" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="etO-ND-OXd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
