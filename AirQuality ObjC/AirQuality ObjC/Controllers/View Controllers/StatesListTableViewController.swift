@@ -55,8 +55,18 @@ class StatesListTableViewController: UITableViewController {
 
     // MARK: - Navigation
 
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toCityVCfromState" {
+            guard let indexPath = tableView.indexPathForSelectedRow,
+                let destinationVC = segue.destination as? CityListTableViewController
+                else { return }
+            
+            let selectedState = states[indexPath.row]
+            
+            destinationVC.countryStateDictionary["state"] = selectedState
+            destinationVC.countryStateDictionary["country"] = country
+        }
+    }
     
     
     // MARK: - Helper Functions
@@ -68,6 +78,10 @@ class StatesListTableViewController: UITableViewController {
             } else {
                 print("Error: no states!")
             }
+            
+            
+            
+            // TO DO: there will be a condition where maybeStates is empty like in the case of Brazil, which has no states. need to find a way to fill states array with just 1 placeholder state that says "click to continue to Brazil's cities"
         }
     }
 
