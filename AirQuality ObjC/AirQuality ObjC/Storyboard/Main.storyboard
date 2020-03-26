@@ -86,9 +86,9 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WkQ-hT-LFk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1130" y="-38"/>
+            <point key="canvasLocation" x="926" y="195"/>
         </scene>
-        <!--City List Table View Controller-->
+        <!--Cities-->
         <scene sceneID="M7n-7A-yc3">
             <objects>
                 <tableViewController id="8I7-mc-Z4S" customClass="CityListTableViewController" customModule="AirQuality_ObjC" customModuleProvider="target" sceneMemberID="viewController">
@@ -120,11 +120,11 @@
                             <outlet property="delegate" destination="8I7-mc-Z4S" id="2Tc-Xm-kKG"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="aQZ-0j-ujY"/>
+                    <navigationItem key="navigationItem" title="Cities" id="aQZ-0j-ujY"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NBF-XM-MHO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1129" y="713"/>
+            <point key="canvasLocation" x="2014" y="195"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tkL-rE-Qai">
